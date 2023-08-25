@@ -4,19 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <include layout="@layout/manga001_linearlayout" />
-
-    <include layout="@layout/manga001_linearlayout1" />
-
+    <include layout="@layout/manga002_linearlayout" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="@drawable/manga001_bbg">
+            android:background="@drawable/manga002_bbg">
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/btnStart"
@@ -28,7 +24,7 @@
                 android:text="Start"
                 android:textColor="@color/white"
                 app:cornerRadius="50dp"
-                app:icon="@drawable/manga001_baseline_start_24"
+                app:icon="@drawable/manga002_baseline_start_24"
                 app:iconGravity="textStart"
                 app:iconTint="@color/white" />
 
@@ -43,7 +39,7 @@
                 android:text="Share"
                 android:textColor="@color/white"
                 app:cornerRadius="50dp"
-                app:icon="@drawable/manga001_baseline_share_24"
+                app:icon="@drawable/manga002_baseline_share_24"
                 app:iconGravity="textStart"
                 app:iconTint="@color/white" />
 
@@ -58,7 +54,7 @@
                 android:text="Rate"
                 android:textColor="@color/white"
                 app:cornerRadius="50dp"
-                app:icon="@drawable/manga001_baseline_star_rate_24"
+                app:icon="@drawable/manga002_baseline_star_rate_24"
                 app:iconGravity="textStart"
                 app:iconTint="@color/white" />
         </LinearLayout>

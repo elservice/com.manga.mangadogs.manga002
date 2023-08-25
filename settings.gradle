@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "com.manga.mangadogs.manga001"
+rootProject.name = "com.manga.mangadogs.manga002"
 include ':app'

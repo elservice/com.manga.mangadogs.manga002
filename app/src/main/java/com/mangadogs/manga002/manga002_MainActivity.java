@@ -1,10 +1,8 @@
-package com.mangadogs.manga001;
+package com.mangadogs.manga002;
 
-import static com.mangadogs.manga001.manga001_SplashActivity.dialogbox;
+import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -16,14 +14,14 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class manga001_MainActivity extends AppCompatActivity {
+public class manga002_MainActivity extends AppCompatActivity {
     Button btnStart, btnShare, btnRate;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga001_main);
+        setContentView(R.layout.manga002_main);
 
 
         dialogbox(this);
@@ -32,16 +30,12 @@ public class manga001_MainActivity extends AppCompatActivity {
         String savedData = sharedPreferences.getString("seventhcharacter", null);
         String savedData1 = sharedPreferences.getString("eighthcharacter", null);
         if (savedData != null && savedData.equals("1") && savedInstanceState == null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.fragmentContainer, new manga001_WebViewFragment());
-            fragmentTransaction.commit();
+            manga002_UnifiedWebViewFragment fragment1 = new manga002_UnifiedWebViewFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment1, "fragmentTag1").commit();
         }
         if (savedData1 != null && savedData1.equals("1") && savedInstanceState == null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.fragmentContainer1, new manga001_WebViewFragment2());
-            fragmentTransaction.commit();
+            manga002_UnifiedWebViewFragment fragment2 = new manga002_UnifiedWebViewFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer1, fragment2, "fragmentTag2").commit();
         }
 
 
@@ -49,7 +43,7 @@ public class manga001_MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(manga001_MainActivity.this, manga001_Continue.class);
+                Intent i = new Intent(manga002_MainActivity.this, manga002_Continue.class);
                 startActivity(i);
             }
         });

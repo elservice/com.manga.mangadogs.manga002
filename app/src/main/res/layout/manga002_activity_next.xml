@@ -3,14 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/manga001_linearlayout"/>
-    <include layout="@layout/manga001_linearlayout1"/>
-
+    <include layout="@layout/manga002_linearlayout"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/manga001_bbg"
+        android:background="@drawable/manga002_bbg"
         android:orientation="vertical">
 
         <ImageView
@@ -19,7 +17,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/manga001_s3"
+            android:src="@drawable/manga002_s3"
             android:text="start" />
 
 
@@ -29,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/manga001_ic_group_4" />
+            android:src="@drawable/manga002_ic_group_4" />
 
 
     </RelativeLayout>

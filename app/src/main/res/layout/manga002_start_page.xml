@@ -3,16 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <include layout="@layout/manga001_linearlayout" />
-
-    <include layout="@layout/manga001_linearlayout1" />
-
+    <include layout="@layout/manga002_linearlayout" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/manga001_bbg">
+        android:background="@drawable/manga002_bbg">
 
 
         <ImageView
@@ -20,14 +16,14 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:src="@drawable/manga001_s1"/>
+            android:src="@drawable/manga002_s1"/>
 
 
         <ImageView
             android:id="@+id/start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/manga001_ic_start"
+            android:src="@drawable/manga002_ic_start"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"/>
 
