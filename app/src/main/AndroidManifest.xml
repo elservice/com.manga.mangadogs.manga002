@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mangadogs.manga002">
+    package="com.mangadogs.manga003">
 <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -16,46 +16,46 @@
 
 
         <activity
-            android:name="com.mangadogs.manga002.manga002_Continue_Next"
+            android:name="com.mangadogs.manga003.manga003_Continue_Next"
             android:exported="false"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name="com.mangadogs.manga002.manga002_MainActivity2"
+            android:name="com.mangadogs.manga003.manga003_MainActivity2"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_DetailsActivity"
+            android:name="com.mangadogs.manga003.manga003_DetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
 
 
         <activity
-            android:name="com.mangadogs.manga002.manga002_Continue"
+            android:name="com.mangadogs.manga003.manga003_Continue"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_start_page"
+            android:name="com.mangadogs.manga003.manga003_start_page"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_MainActivity"
+            android:name="com.mangadogs.manga003.manga003_MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_Next"
+            android:name="com.mangadogs.manga003.manga003_Next"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_Exit"
+            android:name="com.mangadogs.manga003.manga003_Exit"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_Thank_you"
+            android:name="com.mangadogs.manga003.manga003_Thank_you"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.mangadogs.manga002.manga002_SplashActivity"
+            android:name="com.mangadogs.manga003.manga003_SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

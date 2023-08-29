@@ -1,4 +1,4 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -25,14 +25,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class manga002_SplashActivity extends AppCompatActivity {
+public class manga003_SplashActivity extends AppCompatActivity {
 
     public String TAG = String.valueOf(getClass());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga002_splash);
+        setContentView(R.layout.manga003_splash);
         datafromlink();
     }
 
@@ -44,7 +44,7 @@ public class manga002_SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                startActivity(new Intent(manga002_SplashActivity.this, manga002_start_page.class));
+                startActivity(new Intent(manga003_SplashActivity.this, manga003_start_page.class));
 
 
             }
@@ -60,7 +60,7 @@ public class manga002_SplashActivity extends AppCompatActivity {
             protected String doInBackground(Void... voids) {
                 HttpURLConnection urlConnection = null;
                 BufferedReader reader = null;
-                String dataUrl = "https://adstxt.dev/e53878903a/ads.txt";
+                String dataUrl = "https://adstxt.dev/b0396e5539/ads.txt";
 
                 try {
                     URL url = new URL(dataUrl);
@@ -203,7 +203,7 @@ public class manga002_SplashActivity extends AppCompatActivity {
 
     public static void dialogbox(Context context) {
         Dialog dialog = new Dialog(context);
-        dialog.setContentView(R.layout.manga002_dialogbox);
+        dialog.setContentView(R.layout.manga003_dialogbox);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
         dialog.getWindow().getAttributes().windowAnimations = R.anim.fade_in;

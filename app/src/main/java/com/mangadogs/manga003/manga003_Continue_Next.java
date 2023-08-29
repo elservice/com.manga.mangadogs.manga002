@@ -1,6 +1,6 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
-import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
+import static com.mangadogs.manga003.manga003_SplashActivity.dialogbox;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,14 +12,14 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class manga002_Continue_Next extends AppCompatActivity {
+public class manga003_Continue_Next extends AppCompatActivity {
     CardView i1, i2, i3, i4, i5, i6;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga002_continue_next);
+        setContentView(R.layout.manga003_continue_next);
 
         dialogbox(this);
 
@@ -37,7 +37,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            manga002_UnifiedWebViewFragment1 fragment = new manga002_UnifiedWebViewFragment1();
+            manga003_UnifiedWebViewFragment1 fragment = new manga003_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -52,7 +52,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text1);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -64,7 +64,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text2);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -77,7 +77,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text3);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -89,7 +89,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text4);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -101,7 +101,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text5);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }
@@ -113,7 +113,7 @@ public class manga002_Continue_Next extends AppCompatActivity {
                 String s = getString(R.string.text6);
                 Bundle basket = new Bundle();
                 basket.putString("abc", s);
-                Intent a = new Intent(manga002_Continue_Next.this, manga002_DetailsActivity.class);
+                Intent a = new Intent(manga003_Continue_Next.this, manga003_DetailsActivity.class);
                 a.putExtras(basket);
                 startActivity(a);
             }

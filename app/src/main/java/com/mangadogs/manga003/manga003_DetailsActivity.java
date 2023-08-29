@@ -1,22 +1,23 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
-import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
+import static com.mangadogs.manga003.manga003_SplashActivity.dialogbox;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class manga002_Thank_you extends AppCompatActivity {
+public class manga003_DetailsActivity extends AppCompatActivity {
 
-  
+    TextView detail_txt;
 
-    public void onCreate(Bundle savedInstanceState) {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) R.layout.manga002_thank_you);
+        setContentView(R.layout.manga003_details);
 
 
         dialogbox(this);
@@ -35,7 +36,7 @@ public class manga002_Thank_you extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            manga002_UnifiedWebViewFragment1 fragment = new manga002_UnifiedWebViewFragment1();
+            manga003_UnifiedWebViewFragment1 fragment = new manga003_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -43,17 +44,16 @@ public class manga002_Thank_you extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
-        ((Button) findViewById(R.id.visitr)).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                manga002_Thank_you.this.finishAffinity();
-                manga002_Thank_you.this.finish();
-            }
-        });
+        detail_txt = findViewById(R.id.detail_txt);
+        Bundle gt = getIntent().getExtras();
+        String str = gt.getString("abc");
+        detail_txt.setText(str);
     }
 
-
-
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+
 }

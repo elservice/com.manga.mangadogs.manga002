@@ -1,9 +1,7 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
+import static com.mangadogs.manga003.manga003_SplashActivity.dialogbox;
 
-import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,16 +10,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class manga002_MainActivity2 extends AppCompatActivity {
+public class manga003_Thank_you extends AppCompatActivity {
 
-    Button btn1;
-   
+  
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga002_main2);
-
+        setContentView((int) R.layout.manga003_thank_you);
 
 
         dialogbox(this);
@@ -40,7 +35,7 @@ public class manga002_MainActivity2 extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            manga002_UnifiedWebViewFragment1 fragment = new manga002_UnifiedWebViewFragment1();
+            manga003_UnifiedWebViewFragment1 fragment = new manga003_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -48,31 +43,17 @@ public class manga002_MainActivity2 extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
-
-
-        btn1 = findViewById(R.id.btn1);
-
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
+        ((Button) findViewById(R.id.visitr)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent i = new Intent(manga002_MainActivity2.this, manga002_Continue_Next.class);
-                startActivity(i);
+                manga003_Thank_you.this.finishAffinity();
+                manga003_Thank_you.this.finish();
             }
         });
     }
 
 
 
-
-    
-
     public void onBackPressed() {
         super.onBackPressed();
-    
-
-
     }
-
 }
-

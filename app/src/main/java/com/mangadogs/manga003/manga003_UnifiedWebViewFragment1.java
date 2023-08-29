@@ -1,4 +1,4 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -14,13 +14,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class manga002_UnifiedWebViewFragment1 extends Fragment {
+public class manga003_UnifiedWebViewFragment1 extends Fragment {
     private WebView webView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.manga002_fragment_webview, container, false);
+        View view = inflater.inflate(R.layout.manga003_fragment_webview, container, false);
 
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String customUrl = sharedPreferences.getString("data1", "");

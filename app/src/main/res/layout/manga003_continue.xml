@@ -3,39 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/manga002_relativelayout"/>
+
+    <include layout="@layout/manga003_relativelayout" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/manga002_bbg">
+        android:background="@drawable/manga003_bbg"
+        android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:src="@drawable/manga002_s1"></ImageView>
+            android:src="@drawable/manga003_s2"/>
 
 
-        <Button
-            android:id="@+id/btn1"
-            style="@style/Widget.Material3.Button.ElevatedButton"
-            android:layout_width="220dp"
-            android:layout_height="60dp"
+        <ImageView
+            android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/black"
-            android:text="Skip This"
-            android:layout_marginBottom="30dp"
-            android:textColor="@color/white"
-            android:textSize="17dp">
-
-        </Button>
+            android:src="@drawable/manga003_ic_group_28" />
 
 
     </RelativeLayout>
 
+
 </RelativeLayout>
-
-

@@ -1,26 +1,28 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
-
-import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
+import static com.mangadogs.manga003.manga003_SplashActivity.dialogbox;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class manga002_Continue extends AppCompatActivity {
-    ImageView btnContinue;
+public class manga003_Exit extends AppCompatActivity {
+
+   
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onBackPressed() {
+    super.onBackPressed();
+    }
+
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga002_continue);
+        setContentView((int) R.layout.manga003_activity);
 
 
         dialogbox(this);
@@ -39,7 +41,7 @@ public class manga002_Continue extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            manga002_UnifiedWebViewFragment1 fragment = new manga002_UnifiedWebViewFragment1();
+            manga003_UnifiedWebViewFragment1 fragment = new manga003_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -47,22 +49,24 @@ public class manga002_Continue extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
-        btnContinue = findViewById(R.id.btnContinue);
-        btnContinue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(manga002_Continue.this, manga002_MainActivity2.class);
-                startActivity(i);
+        ImageView imageView = (ImageView) findViewById(R.id.exitapp);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                manga003_Exit.this.startActivity(new Intent(manga003_Exit.this, manga003_Thank_you.class));
+
             }
         });
-
+        ImageView imageView2 = (ImageView) findViewById(R.id.btn_no);
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                manga003_Exit.this.startActivity(new Intent(manga003_Exit.this, manga003_start_page.class));
+            }
+        });
     }
 
-    public void onBackPressed() {
-        super.onBackPressed();
 
 
-    }
+    
 
 
 }

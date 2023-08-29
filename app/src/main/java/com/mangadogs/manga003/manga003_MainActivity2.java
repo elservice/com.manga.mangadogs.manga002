@@ -1,23 +1,27 @@
-package com.mangadogs.manga002;
+package com.mangadogs.manga003;
 
-import static com.mangadogs.manga002.manga002_SplashActivity.dialogbox;
 
+import static com.mangadogs.manga003.manga003_SplashActivity.dialogbox;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 
-public class manga002_DetailsActivity extends AppCompatActivity {
+public class manga003_MainActivity2 extends AppCompatActivity {
 
-    TextView detail_txt;
-
+    Button btn1;
+   
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manga002_details);
+        setContentView(R.layout.manga003_main2);
+
 
 
         dialogbox(this);
@@ -36,7 +40,7 @@ public class manga002_DetailsActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         for (int i = 0; i < containerIDs.length; i++) {
-            manga002_UnifiedWebViewFragment1 fragment = new manga002_UnifiedWebViewFragment1();
+            manga003_UnifiedWebViewFragment1 fragment = new manga003_UnifiedWebViewFragment1();
             String tag = "fragmentTag" + (i + 1);
             fragmentTransaction.replace(containerIDs[i], fragment, tag);
         }
@@ -44,16 +48,31 @@ public class manga002_DetailsActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
-        detail_txt = findViewById(R.id.detail_txt);
-        Bundle gt = getIntent().getExtras();
-        String str = gt.getString("abc");
-        detail_txt.setText(str);
+
+
+        btn1 = findViewById(R.id.btn1);
+
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(manga003_MainActivity2.this, manga003_Continue_Next.class);
+                startActivity(i);
+            }
+        });
     }
 
-    @Override
+
+
+
+    
+
     public void onBackPressed() {
         super.onBackPressed();
+    
+
+
     }
 
-
 }
+

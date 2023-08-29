@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/manga002_imangadogs"
+    android:background="@drawable/manga003_imangadogs"
     android:orientation="vertical"
 
     android:weightSum="3">
@@ -16,7 +16,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:src="@drawable/manga002_lg">
+            android:src="@drawable/manga003_lg">
 
         </ImageView>
 
@@ -28,9 +28,9 @@
         android:layout_height="7dp"
         android:layout_alignParentBottom="true"
         android:indeterminate="true"
-        android:indeterminateDrawable="@drawable/manga002_progess_gradient_splash"
+        android:indeterminateDrawable="@drawable/manga003_progess_gradient_splash"
         android:progress="100"
-        android:progressDrawable="@drawable/manga002_progess_gradient_splash" />
+        android:progressDrawable="@drawable/manga003_progess_gradient_splash" />
 
 
 </LinearLayout>
